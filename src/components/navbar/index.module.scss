@@ -1,0 +1,29 @@
+// @import "../../../scss/variables/colors";
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include size(100%, 50px);
+  @include flex(row, flex-end, center, 0, nowrap);
+  background-color: $second-color;
+  .about {
+    @include space-around(10px, 0, 0);
+    text-decoration: none;
+    color: $third-color;
+    &::after {
+      content: "";
+      width: 0;
+      height: 1px;
+      position: absolute;
+      bottom: 12px;
+      right: 10px;
+      background-color: $third-color;
+      transition: width $fast ease-in-out;
+    }
+    &:hover {
+      &::after {
+        width: 45px;
+      }
+    }
+  }
+}
