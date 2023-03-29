@@ -2,7 +2,6 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import Home from "./pages/home";
 import About from "./pages/about";
-import City from "./pages/city";
 import MainLayouts from "./layouts/mainLayouts";
 import Activities from "./pages/activities";
 import Activity from "./pages/activities/id";
