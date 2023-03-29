@@ -1,20 +1,25 @@
+import { useNavigate } from "react-router-dom";
 import styles from "./index.module.scss";
 
-const Card = () => {
+const Card = ({ data }) => {
+  const navigate = useNavigate();
+
+  const onHandleClick = () => {
+    navigate(`/activities/${data.uuid}`);
+    // console.log(data.slug_id);
+  };
+
   return (
-    <div className={styles.Card}>
+    <div className={styles.Card} onClick={onHandleClick}>
       <div className={styles.container}>
         {/* Image */}
         <div className={styles.image}>
-          <img
-            src="https://images.musement.com/cover/0002/49/fotolia-199353438-subscription-xxl-jpg_header-148705.jpeg"
-            alt="cityname"
-          />
+          <img src={data.cover_image_url} />
         </div>
         {/* Content */}
         <div className={styles.content}>
-          <h1>Nome città</h1>
-          <p>Attrazione e tour guidati</p>
+          <h1>{data.city.name}</h1>
+          <p>{data.title}</p>
         </div>
       </div>
     </div>

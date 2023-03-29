@@ -1,9 +1,11 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Activity from "./pages/Activity";
-import City from "./pages/City";
+import Home from "./pages/home";
+import About from "./pages/about";
+import City from "./pages/city";
+import MainLayouts from "./layouts/mainLayouts";
+import Activities from "./pages/activities";
+import Activity from "./pages/activities/id";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -14,11 +16,12 @@ import "./index.module.scss";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route>
+    <Route element={<MainLayouts />}>
       <Route path="/" element={<Home />} />
       <Route path="about" element={<About />} />
-      <Route path="activity/:id" element={<Activity />} />
-      <Route path="city/:id" element={<City />} />
+      <Route path="activities" element={<Activities />} />
+      <Route path="activities/:id" element={<Activity />} />
+      {/* <Route path="city/:id" element={<City />} /> */}
     </Route>
   )
 );

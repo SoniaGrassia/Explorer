@@ -1,6 +1,8 @@
 .Footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  width: 100%;
+  left: 0;
+  @include size(100vw, 100px);
   border: 1px solid blue;
+  background-color: $first-color;
 }
