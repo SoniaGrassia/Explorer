@@ -6,7 +6,8 @@ const Card = ({ data }) => {
 
   const onHandleClick = () => {
     navigate(`/activities/${data.uuid}`);
-    // console.log(data.slug_id);
+    const id = data.uuid;
+    // console.log(id);
   };
 
   return (

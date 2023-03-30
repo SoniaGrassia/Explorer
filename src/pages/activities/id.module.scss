@@ -1,2 +1,16 @@
 .Activity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .containerImage {
+    @include size(300px);
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  hr {
+    width: 100%;
+  }
 }
