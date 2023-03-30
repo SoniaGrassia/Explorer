@@ -1,14 +1,16 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./index.module.scss";
 
 const Navbar = () => {
   const [inputValue, setInputValue] = useState("");
+  const navigate = useNavigate();
 
   const onHandleInput = (e) => setInputValue(() => e.target.value);
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
+    navigate(`/city/${inputValue.toLowerCase()}`);
     setInputValue(() => "");
   };
 

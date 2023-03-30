@@ -5,6 +5,7 @@ import About from "./pages/About";
 import MainLayouts from "./layouts";
 import Activities from "./pages/activities";
 import Activity from "./pages/activities/id";
+import City from "./pages/city/id";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -20,7 +21,7 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />} />
       <Route path="activities" element={<Activities />} />
       <Route path="activities/:id" element={<Activity />} />
-      {/* <Route path="city/:id" element={<City />} /> */}
+      <Route path="city/:id" element={<City />} />
     </Route>
   )
 );
