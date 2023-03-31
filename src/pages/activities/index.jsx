@@ -9,7 +9,6 @@ export default function Activities() {
   useEffect(() => {
     //   GET().then(({ data }) => {
     setDataList(activities.data);
-    // console.log(dataList);
     //   });
   }, []);
   return (

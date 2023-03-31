@@ -24,9 +24,7 @@ export default function Activity() {
       <hr />
       <div className={styles.activities}>
         <h2 className={styles.secondTitle}>
-          Best activities in
-          {/*se aggiungo questo non mi trova il dato
-           {activity.city.name} */}
+          Best activities in {activity.city?.name}
         </h2>
         {/* si spacca */}
         {/* {activity.categories.map((category) => (

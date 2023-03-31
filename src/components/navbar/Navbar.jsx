@@ -10,7 +10,7 @@ const Navbar = () => {
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    navigate(`/city/${inputValue.toLowerCase()}`);
+    navigate(`/city?search=${inputValue}`);
     setInputValue(() => "");
   };
 

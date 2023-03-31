@@ -6,7 +6,7 @@ const Card = ({ data }) => {
 
   const onHandleClick = () => {
     navigate(`/activities/${data.uuid}`);
-    const id = data.uuid;
+    // const id = data.uuid;
     // console.log(id);
   };
 
@@ -19,7 +19,7 @@ const Card = ({ data }) => {
         </div>
         {/* Content */}
         <div className={styles.content}>
-          <h1>{data.city.name}</h1>
+          <h1>{data.city?.name}</h1>
           <p>{data.title}</p>
         </div>
       </div>

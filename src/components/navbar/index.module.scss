@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   @include size(100%, 50px);
-  @include flex(row, space-between, center, 0, nowrap);
+  @include flex(row, space-evenly, center, 0, nowrap);
   @include space-around(0, 0, 20px);
   background-color: $second-color;
   box-sizing: border-box;
